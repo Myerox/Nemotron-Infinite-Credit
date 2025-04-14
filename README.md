@@ -1,5 +1,5 @@
 # 📜 Nemotron Infinite Credit Exploit
-## Tampermonkey userscript that modifies outgoing API requests on nemotron.one to spoof user data and gain infinite credits and Pro access.
+## Tampermonkey userscript that modifies outgoing API requests on nemotron.one to spoof user data and gain infinite credits.
 
 # ⚙️ Features
 - 🚀 Sets credits to ten trillions credits on every chat request
