@@ -6,7 +6,7 @@
 
 - 🔁 Works seamlessly in the background
 
-- 🧠 Infinite AI talks
+- 🧠 Infinite AI talks and Infinite Image Generation
 
 # 🛠 Installation
 Install Tampermonkey if you haven't already.
