@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Infinite credits
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Intercepts POST requests and changes credits to 10000000000000 (Because why not)
 // @author       Ramona-Flower
 // @match        https://nemotron.one/*
@@ -16,7 +16,12 @@
     window.fetch = async function(input, init = {}) {
         const url = typeof input === 'string' ? input : input.url || '';
 
-        if (url.includes('/api/chat') && init.method === 'POST' && init.body) {
+        const shouldModify = (
+            url.includes('/api/chat') ||
+            url.includes('/api/predictions')
+        ) && init.method === 'POST' && init.body;
+
+        if (shouldModify) {
             try {
                 const bodyObj = JSON.parse(init.body);
 
